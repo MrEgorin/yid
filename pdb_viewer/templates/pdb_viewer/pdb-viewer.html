@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YID - PDB Viewer</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <img class="header__logo-img" src="{% static 'images/logo.png' %}" alt="YID Logo Image">
+            </div>
+            <button class="header__nav-toggle" aria-label="Toggle navigation">
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+            </button>
+            <ul class="header__nav-list"></ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="pdb-viewer-section">
+            <div class="container">
+                <h2 class="pdb-viewer-section__title">PDB Viewer</h2>
+                <form id="pdbForm" enctype="multipart/form-data">
+                    <input type="file" id="pdbInput" accept=".pdb" class="pdb-viewer-section__input">
+                    <button type="submit" id="visualize-btn" class="pdb-viewer-section__button">Visualize</button>
+                </form>
+                <button id="toggle-atoms-btn" class="pdb-viewer-section__button" disabled>Full Atoms</button>
+                <button id="toggle-amino-btn" class="pdb-viewer-section__button" disabled>Amino Acids</button>
+                <button id="toggle-cluster-btn" class="pdb-viewer-section__button" disabled>Clusters</button>
+                <button id="toggle-ribbon-btn" class="pdb-viewer-section__button" disabled>Ribbon View</button>
+                <button id="toggle-labels-btn" class="pdb-viewer-section__button" disabled>Toggle Labels</button>
+                <button id="reset-angle-btn" class="pdb-viewer-section__button" disabled>Reset Angle</button>
+                <div id="threeJsContainer" class="pdb-viewer-section__canvas"></div>
+                <div id="angleInfo" class="pdb-viewer-section__info"></div>
+                <div id="angleResult" class="pdb-viewer-section__result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">© 2025 YID. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+    <script src="{% static 'vendor/OrbitControls.js' %}" defer></script>
+    <script src="{% static 'js/pdb-viewer.js' %}" defer></script>
+    <script src="{% static 'js/menu.js' %}" defer></script>
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+</body>
+</html>

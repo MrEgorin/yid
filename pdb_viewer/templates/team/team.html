@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YID - Team</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Підключення Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <img class="header__logo-img" src="{% static 'images/logo.png' %}" alt="YID Logo Image">
+            </div>
+            <button class="header__nav-toggle" aria-label="Toggle navigation">
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+            </button>
+            <ul class="header__nav-list"></ul>
+        </nav>
+    </header>
+
+    <!-- Основний вміст -->
+    <main class="main-content">
+        <section class="team">
+            <div class="container">
+                <h2 class="team__title">Our Team</h2>
+                <p class="team__description">Egor, a former engineer in pharmaceutical biotechnology, is now a bioinformatician specializing in molecular biotechnology for pharmaceutical and medical applications. Diana, previously a physiologist, now works as a geneticist and bioinformatician. Ihor, formerly a molecular biologist, is currently a computational biologist in the drug discovery department of a major Ukrainian chemical company.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="{% static 'images/photo_2024-11-09_19-27-09.jpg' %}" alt="Egor Franchuk" class="team-member__image">
+                        <h3 class="team-member__name">Франчук Єгор</h3>
+                        <p class="team-member__position">Student at Taras Shevchenko National University of Kyiv</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="{% static 'images/belska.png' %}" alt="Diana Belska" class="team-member__image">
+                        <h3 class="team-member__name">Бельська Діана</h3>
+                        <p class="team-member__position">Student at Taras Shevchenko National University of Kyiv</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="{% static 'images/popadik.jpg' %}" alt="Ihor Popadik" class="team-member__image">
+                        <h3 class="team-member__name">Попадик Ігор</h3>
+                        <p class="team-member__position">Student at Taras Shevchenko National University of Kyiv</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">© 2025 YID. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+    <script src="{% static 'js/menu.js' %}" defer></script>
+</body>
+</html>

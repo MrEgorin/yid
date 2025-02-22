@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YID - Services</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <img class="header__logo-img" src="{% static 'images/logo.png' %}" alt="YID Logo Image">
+            </div>
+            <button class="header__nav-toggle" aria-label="Toggle navigation">
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+            </button>
+            <ul class="header__nav-list"></ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="biotech-intro">
+            <div class="container">
+                <h2>Biotechnology and Bioinformatics</h2>
+                <p>Biotechnology is revolutionizing medicine, agriculture, and environmental science by harnessing biological processes for innovative solutions. Bioinformatics plays a crucial role by analyzing vast biological datasets, enabling breakthroughs in drug discovery, genetic engineering, and personalized medicine.</p>
+            </div>
+        </section>
+        
+        <section class="services">
+            <div class="container">
+                <h2 class="services__title">Our Services</h2>
+                <p>We offer cutting-edge biotechnological solutions leveraging computational biology and artificial intelligence.</p>
+                <div class="services__items">
+                    <div class="service-item">
+                        <h3 class="service-item__title">CRISPR-Cas Engineering</h3>
+                        <p class="service-item__description">We provide precision genome editing using CRISPR-Cas technology, enabling targeted gene modifications for research and medical applications.</p>
+                        <img class="service-item__image" src="{% static 'images/one.png' %}" alt="CRISPR-Cas9 Illustration">
+                    </div>
+                    <div class="service-item">
+                        <h3 class="service-item__title">Drug Design and Discovery</h3>
+                        <p class="service-item__description">Our expertise in computational drug discovery accelerates the identification of novel therapeutic compounds.</p>
+                        <img class="service-item__image" src="{% static 'images/three.png' %}" alt="Drug Design Illustration">
+                    </div>
+                    <div class="service-item">
+                        <h3 class="service-item__title">Protein Engineering</h3>
+                        <p class="service-item__description">We design and optimize proteins for enhanced stability and functionality in pharmaceutical and industrial applications.</p>
+                        <img class="service-item__image" src="{% static 'images/four.png' %}" alt="Illustration of FGFR3">
+                    </div>
+                    <div class="service-item">
+                        <h3 class="service-item__title">Genomics and Omics</h3>
+                        <p class="service-item__description">Our genomic and multi-omics analysis enables breakthroughs in precision medicine and biological research.</p>
+                        <img class="service-item__image" src="{% static 'images/five.png' %}" alt="The Project of Human Genome">
+                    </div>
+                    <div class="service-item">
+                        <h3 class="service-item__title">AI for Biotech</h3>
+                        <p class="service-item__description">We integrate artificial intelligence with biotechnology to enhance data-driven discoveries and streamline research.</p>
+                        <img class="service-item__image" src="{% static 'images/two.png' %}" alt="AI in Biotech Illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">© 2025 YID. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+    <script src="{% static 'js/menu.js' %}" defer></script>
+</body>
+</html>

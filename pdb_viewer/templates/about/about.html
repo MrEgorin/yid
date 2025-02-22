@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YID - About</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Підключення Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайту -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <img class="header__logo-img" src="{% static 'images/logo.png' %}" alt="YID Logo Image">
+            </div>
+            <button class="header__nav-toggle" aria-label="Toggle navigation">
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+            </button>
+            <ul class="header__nav-list"></ul>
+        </nav>
+    </header>
+
+    <!-- Основний вміст -->
+    <main class="main-content">
+        <!-- Розділ 1 -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="about-section__title">About Us</h2>
+                <p class="about-section__text">
+                    YID is a young and ambitious biotechnology company founded by a team of passionate students from Taras Shevchenko National University of Kyiv, Institute of High Technologies, Department of Bioinformatics and Molecular Biotechnology. Our goal is to push the boundaries of modern science and create innovative solutions for global challenges in healthcare, agriculture, and environmental sustainability.
+                </p>
+                <p class="about-section__text">
+                    We believe that the future of biotechnology lies in interdisciplinary collaboration, cutting-edge research, and the application of advanced technologies such as CRISPR-RNA engineering, artificial intelligence, and omics data analysis.
+                </p>
+            </div>
+        </section>
+
+        <!-- Розділ 2 -->
+        <section class="mission-section">
+            <div class="container">
+                <h3 class="mission-section__title">Our Mission</h3>
+                <p class="mission-section__text">
+                    At YID, our mission is to revolutionize the biotechnology industry by developing groundbreaking solutions that improve human health, enhance agricultural productivity, and protect our planet's ecosystems. We strive to make science accessible, ethical, and impactful.
+                </p>
+                <blockquote class="mission-section__quote">
+                    "Science is not just about discovery; it's about making a difference."
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Розділ 3 -->
+        <section class="vision-section">
+            <div class="container">
+                <h3 class="vision-section__title">Our Vision</h3>
+                <p class="vision-section__text">
+                    Our vision is to become a leading force in the global biotechnology landscape, driving innovation and fostering collaboration between academia, industry, and society. We aim to create a world where scientific breakthroughs translate into tangible benefits for humanity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Розділ 4 -->
+        <section class="why-us-section">
+            <div class="container">
+                <h3 class="why-us-section__title">Why Choose YID?</h3>
+                <ul class="why-us-section__list">
+                    <li class="why-us-section__item"><strong>Innovative Approach:</strong> We leverage the latest advancements in biotechnology and bioinformatics to deliver cutting-edge solutions.</li>
+                    <li class="why-us-section__item"><strong>Expertise:</strong> Our team combines deep scientific knowledge with practical experience in drug design, protein engineering, and genomics.</li>
+                    <li class="why-us-section__item"><strong>Passion:</strong> We are driven by a passion for science and a commitment to making a positive impact on the world.</li>
+                    <li class="why-us-section__item"><strong>Sustainability:</strong> We prioritize environmentally friendly practices and strive to minimize our ecological footprint.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Розділ 5 -->
+        <section class="founders-message">
+            <div class="container">
+                <h3 class="founders-message__title">Message from the Founders</h3>
+                <p class="founders-message__text">
+                    "At YID, we believe that every challenge presents an opportunity for innovation. Our journey began with a shared vision to harness the power of biotechnology for the greater good. Together, we are building a company that not only advances science but also inspires others to join us in this exciting endeavor."
+                </p>
+                <p class="founders-message__authors">
+                    — Франчук Єгор, Бельська Діана, Попадик Ігор
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер сайту -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">© 2025 YID. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Підключення JS -->
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+    <script src="{% static 'js/menu.js' %}" defer></script>
+</body>
+</html>

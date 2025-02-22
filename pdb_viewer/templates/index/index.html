@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YID - Home</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <img class="header__logo-img" src="{% static 'images/logo.png' %}" alt="YID Logo Image">
+            </div>
+            <button class="header__nav-toggle" aria-label="Toggle navigation">
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+                <span class="header__nav-toggle-bar"></span>
+            </button>
+            <ul class="header__nav-list"></ul>
+        </nav>
+        <div class="header__hero">
+            <img class="header__hero-img" src="{% static 'images/header.png' %}" alt="Header Image">
+            <h1 class="header__hero-title">Welcome to YID</h1>
+            <p class="header__hero-description">Innovating the Future of Biotechnology</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="introduction">
+            <div class="container">
+                <h2 class="introduction__title">About YID</h2>
+                <p class="introduction__text">
+                    YID is a cutting-edge biotechnology company specializing in CRISPR-RNA engineering, drug design and discovery, protein engineering, genomics, and omics.
+                </p>
+                <p class="introduction__text">
+                    We are passionate about pushing the boundaries of science and technology to create innovative solutions for global challenges.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">© 2025 YID. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+    <script src="{% static 'js/menu.js' %}" defer></script>
+</body>
+</html>

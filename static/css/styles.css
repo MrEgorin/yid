@@ -1,0 +1,428 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Використовуємо Google Fonts */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-x: hidden; /* Запобігаємо горизонтальному скроллу */
+}
+
+/* Header Styles */
+.header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header__logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link:hover, .header__nav-link--active {
+    color: #007bff;
+}
+
+/* Бургер-меню */
+.header__nav-toggle {
+    display: none; /* Сховане за замовчуванням */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.header__nav-toggle-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.header__nav-toggle--active .header__nav-toggle-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__nav-toggle--active .header__nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.header__nav-toggle--active .header__nav-toggle-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Hero Section */
+.header__hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.header__hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.header__hero-title {
+    font-size: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.header__hero-description {
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+/* General Typography */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Services Section */
+.services {
+    padding: 2rem 0;
+    background-color: #ffffff;
+}
+
+.services__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.services__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+.service-item {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.service-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-item__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Team Section */
+.team {
+    padding: 2rem 0;
+    background-color: #ffffff;
+}
+
+.team__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 0 20px;
+}
+
+.team-member {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.team-member.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member__image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.team-member__name {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.team-member__position {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Calculator Section */
+.calculator-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.calculator-section__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.calculator-form__label {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.calculator-form__input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.calculator-form__button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-form__button:hover {
+    background-color: #0056b3;
+}
+
+.calculator-form__button.button-click {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-out;
+}
+
+.calculator-section__result {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+/* PDB Viewer Section */
+.pdb-viewer-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.pdb-viewer-section__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.pdb-viewer-section__input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pdb-viewer-section__canvas {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pdb-viewer-section__info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.pdb-viewer-section__button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pdb-viewer-section__button:hover {
+    background-color: #0056b3;
+}
+
+.pdb-viewer-section__result {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Адаптивний дизайн для великих екранів */
+@media (min-width: 1200px) {
+    .services__items, .team-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки для великих екранів */
+    }
+
+    .pdb-viewer-section__canvas {
+        width: 90%; /* Більша ширина для великого екрана */
+    }
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    .header__nav-list {
+        display: none; /* Ховаємо меню за замовчуванням */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #f4f4f4;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__nav-list--active {
+        display: flex; /* Показуємо при активації */
+    }
+
+    .header__nav-toggle {
+        display: flex; /* Показуємо бургер-меню */
+    }
+
+    .header__nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .services__items, .team-grid {
+        grid-template-columns: 1fr; /* 1 колонка для планшетів */
+    }
+
+    .pdb-viewer-section__canvas {
+        width: 100%; /* Повна ширина для планшетів */
+        height: 400px; /* Зменшена висота для планшетів */
+    }
+}
+
+@media (max-width: 480px) {
+    .header__hero-title, .header__hero-description {
+        font-size: 1.8rem; 
+    }
+
+    .header__logo-img {
+        width: 80px;
+    }
+
+    .services__title, .team__title, .calculator-section__title, .pdb-viewer-section__title {
+        font-size: 1.5rem;
+    }
+
+    .pdb-viewer-section__canvas {
+        height: 300px; /* Зменшена висота для мобільних */
+    }
+}
+
+/* Вендорні префікси для сумісності */
+.header__hero-img, .service-item__image, .team-member__image {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.service-item, .team-member {
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
